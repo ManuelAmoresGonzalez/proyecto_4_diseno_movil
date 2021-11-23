@@ -5,6 +5,8 @@
       <div class="title margin-bottom margin-top">Paso: {{i + 1}}</div>
       <div class="margin-bottom"> Ingredientes: {{step.Operador}}</div>
       <div style="margin-bottom: 15%"> Utensilios: {{step.PorcentajePavimentado}}</div>
-      <ion-icon color= "success" style="font-size: 20px; margin-left: 95%;" name="person-add-outline"></ion-icon>
+      <div *ngIf="step.reservado == true; then thenBlock else elseBlock"></div>
+      <ng-template #thenBlock><ion-icon color= "success" style="font-size: 20px; margin-left: 95%;" name="person-add-outline"></ion-icon></ng-template>
+      <ng-template #elseBlock><ion-icon color= "danger" style="font-size: 20px; margin-left: 95%;" name="person-add-outline"></ion-icon></ng-template>      
   </ion-card>
 </div>
