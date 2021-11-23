@@ -1,11 +1,10 @@
-
-<ion-title style= "color: gray; text-align: center;">Información de servicios</ion-title>
-<ion-searchbar style= "background: gray; text-align: center;" placeholder="Filtrar resultados" [(ngModel)]="nombrefiltrado" animated="true"></ion-searchbar>
-    <ion-card class="" style= "color: gray;" *ngFor="let step of prueba | filter : nombrefiltrado; index as i">
-        <div class="title margin-bottom margin-top">Paso: {{i + 1}}</div>
-        <div class="margin-bottom"> Ingredientes: {{step.Operador}}</div>
-        <div style="margin-bottom: 15%"> Utensilios: {{step.PorcentajePavimentado}}</div>
-        <ion-icon color= "success" style="font-size: 15px; margin-left: 95%;" name="person-add-outline"></ion-icon>
-    </ion-card>
-
-
+<div>
+  <ion-title style= "color: gray; text-align: center;">Información de servicios</ion-title>
+  <ion-searchbar style= "background: gray; text-align: center;" placeholder="Filtrar resultados" [(ngModel)]="nombrefiltrado" animated="true"></ion-searchbar>
+  <ion-card class="" style= "color: gray;" *ngFor="let step of prueba | filter : nombrefiltrado; index as i">
+      <div class="title margin-bottom margin-top">Paso: {{i + 1}}</div>
+      <div class="margin-bottom"> Ingredientes: {{step.Operador}}</div>
+      <div style="margin-bottom: 15%"> Utensilios: {{step.PorcentajePavimentado}}</div>
+      <ion-icon color= "success" style="font-size: 20px; margin-left: 95%;" name="person-add-outline"></ion-icon>
+  </ion-card>
+</div>
