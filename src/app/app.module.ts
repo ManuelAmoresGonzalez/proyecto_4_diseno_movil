@@ -7,12 +7,14 @@ import { CommonModule } from "@angular/common";
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { conexionService } from './Services/conexion.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, CommonModule],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, CommonModule, HttpClientModule,],
+  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy },  conexionService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
