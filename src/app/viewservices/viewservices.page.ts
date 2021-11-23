@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { conexionService } from '../Services/conexion.service';
 
 @Component({
   selector: 'app-viewservices',
@@ -8,7 +9,6 @@ import { Component, OnInit } from '@angular/core';
 export class ViewservicesPage implements OnInit {
 
   nombrefiltrado = '';
-
 
   public prueba = [
     {
@@ -25,9 +25,12 @@ export class ViewservicesPage implements OnInit {
     }    
   ]
   
-  constructor() { }
+  constructor(private conexion: conexionService) { }
 
   ngOnInit() {
+    this.conexion.getAllServices().subscribe(res => {
+      console.log(res);
+    });
   }
 
 }
