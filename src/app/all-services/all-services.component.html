@@ -1,0 +1,16 @@
+
+
+<div class="card" >
+  <ion-slides class="slides-container">
+    <ion-slide *ngFor="let step of prueba; index as i">
+      <ion-card class="slide-card">
+        <ion-card-content>
+          <div class="title margin-bottom margin-top">Paso: {{i + 1}}</div>
+          <div class="margin-bottom"> Ingredientes: <ion-badge color="primary" class="margin-left" >{{step.Operador}}</ion-badge> </div>
+          <div style="margin-bottom: 15%"> Utensilios: <ion-badge color="primary" class="margin-left" >{{step.PorcentajePavimentado}}</ion-badge> </div>
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
+</div>
+
